@@ -23,9 +23,8 @@ template<typename T, std::size_t N>
 void test_assign() {
     my_array<T, N> a;
     a.fill(1);
-    for (size_t i = 0; i < N; i++) {
-        assert(a[i] == 1); // эта функция рандомно генерирует значение в зависимости от хэша, который ей приходит. Для одного и того же val она вернёт одно и то же значение
-    }
+    for (size_t i = 0; i < N; i++)
+        assert(a[i] == 1);
     assert(sizeof(my_array<bool, 9>) == 2);
 }
 
